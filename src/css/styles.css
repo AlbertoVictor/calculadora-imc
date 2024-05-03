@@ -1,0 +1,107 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#body{
+    background: linear-gradient(90deg, rgb(5, 192, 36), rgb(0, 255, 85), rgb(0, 255, 255));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 180% 180%;
+    animation: gradient-animation 5s ease infinite;
+}
+.container{
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.651);
+    width: 93vw;
+    height: 93vh;
+    background-color: rgb(29, 29, 29);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input{
+    color: white;
+    background-color: rgb(27, 27, 27);
+    border-color: white transparent transparent white;
+}
+.content{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+#button{
+    width: 120px;
+    height: 50px;
+    font-size: 16px;
+    padding: 5px;
+    background-color: rgb(0, 255, 98);
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    color: rgb(58, 58, 58);
+}
+#resultado{
+    padding: 10px;
+    width: 80%;
+    height: 80px;
+    background-color: rgb(24, 24, 24);
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+#foto{
+    background-image: url(https://png.pngtree.com/png-vector/20220618/ourmid/pngtree-cardio-activity-isometric-concept-with-strength-training-ball-exercises-fitness-weights-png-image_5206985.png);
+    width: 50%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.dados{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 150px;
+    width: 200px;
+}
+@keyframes gradient-animation{
+    0% {
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+@media(max-width:480px){
+    .container{
+        flex-direction: column;
+        width: 100vw;
+    }
+    .content{
+        width: 100%;
+    }
+    .dados{
+        font-size: 20px;
+    }
+    #button{
+        width: 50%;
+        height: 12%;
+        font-size: 22px;
+    }
+    #foto{
+        width: 90%;
+        height: 40%;
+        background-size: cover;
+    }
+}
